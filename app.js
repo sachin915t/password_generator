@@ -7,6 +7,10 @@ let number = document.getElementById("number");
 let symbols = document.getElementById("symbols");
 let genBtn = document.getElementById("genBtn");
 let copyIcon = document.getElementById("copyIcon");
+let body = document.querySelector("body")
+
+
+
 
 //slider
 sliderValue.innerText = inputSlider.value
@@ -14,6 +18,18 @@ inputSlider.addEventListener("input",()=>{
     sliderValue.innerText = inputSlider.value
    
 })
+
+if(inputSlider.value < 6){
+    body.style.background = 'linear-gradient(90deg, rgba(255,0,146,1) 0%, rgba(255,2,7,1) 100%)'
+}
+
+else if(inputSlider.value > 6){
+    body.style.background = 'linear-gradient(90deg, rgba(99,129,64,1) 0%, rgba(0,88,18,1) 100%)'
+}
+else{
+    body.style.background = 'linear-gradient(0deg, rgba(0,147,255,1) 25%, rgba(24,84,149,1) 99%)'
+}
+
 
 genBtn.addEventListener("click", () => {
     passBox.value = generatePassword();
