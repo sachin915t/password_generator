@@ -127,3 +127,7 @@ body{
 a{
     color: rgb(0, 0, 0);
 }
+
+footer{
+    margin-block:30px;
+}
